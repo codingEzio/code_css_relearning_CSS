@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3-1</title>
+  </head>
+  <body>
+    <header><h1>Sample flexbox example</h1></header>
+    <section>
+        <section>
+            <article>
+              <h2>First article</h2>
+
+              <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+            </article>
+
+            <article>
+              <h2>Second article</h2>
+
+              <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+            </article>
+
+            <article>
+              <h2>Third article</h2>
+
+              <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+
+              <p>Cray f, XOXO +1 keffiyeh pickled chambrat ennui. Organic use put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+            </article>
+
+            <article>
+              <h2>Fourth article</h2>
+
+              <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everydsssay carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+            </article>
+
+            <article>
+              <h2>Fifth article</h2>
+
+              <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carryd vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooedd trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+            </article>
+
+        </section>
+
+    <style>
+      /* setup */
+      h1 {
+        text-align: center;
+        line-height: 50px;
+        color: goldenrod;
+        background-color: aquamarine;
+      }
+      article {
+        padding: 10px;
+        margin: 10px;
+        background-color: antiquewhite;
+      }
+
+      /* flexbox styles starts here */
+
+
+      section {
+        /* base definition */
+        display: flex;
+      }
+
+      /*
+        flex: how much space each flex items take up (compared to each other)
+
+        flex is shorthand for {flex-grow, flex-shrink, flex-basis}
+        MDN advises writing the shorthand version instead of the full three.
+       */
+      article {
+          flex: 1;
+      }
+      article:nth-child(3) {
+          flex: 2;
+      }
+      article:nth-child(5) {
+          flex: 0.5 10%;
+      }
+    </style>
+  </body>
+</html>

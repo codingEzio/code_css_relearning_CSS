@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3-4</title>
+  </head>
+  <body>
+    <header>
+      <h1>Complex flexbox example</h1>
+    </header>
+
+    <section>
+      <article>
+        <h2>First article</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim
+          semper illud extra est, quod arte comprehenditur. Si sapiens, ne tum
+          quidem miser, cum ab Oroete, praetore Darei, in crucem actus est. Qui
+          autem de summo bono dissentit de tota philosophiae ratione dissentit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim
+          semper illud extra est, quod arte comprehenditur. Si sapiens, ne tum
+          quidem miser, cum ab Oroete, praetore Darei, in crucem actus est. Qui
+          autem de summo bono dissentit de tota philosophiae ratione dissentit.
+        </p>
+      </article>
+      <article>
+        <h2>Second article</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim
+          semper illud extra est, quod arte comprehenditur. Si sapiens, ne tum
+          quidem miser, cum ab Oroete, praetore Darei, in crucem actus est. Qui
+          autem de summo bono dissentit de tota philosophiae ratione dissentit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim
+          semper illud extra est, quod arte comprehenditur. Si sapiens, ne tum
+          quidem miser, cum ab Oroete, praetore Darei, in crucem actus est. Qui
+          autem de summo bono dissentit de tota philosophiae ratione dissentit.
+        </p>
+      </article>
+      <article>
+        <div id="buttons">
+          <button>Shrug</button>
+          <button>Smile</button>
+          <button>Blush</button>
+          <button>Laugh</button>
+          <button>Wink</button>
+          <button>Cry</button>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim
+            semper illud extra est, quod arte comprehenditur. Si sapiens, ne
+            tum quidem miser, cum ab Oroete, praetore Darei, in crucem actus
+            est. Qui autem de summo bono dissentit de tota philosophiae ratione
+            dissentit.
+          </p>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim
+            semper illud extra est, quod arte comprehenditur. Si sapiens, ne
+            tum quidem miser, cum ab Oroete, praetore Darei, in crucem actus
+            est. Qui autem de summo bono dissentit de tota philosophiae ratione
+            dissentit.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <style>
+      /* setup */
+      h1 {
+        text-align: center;
+        line-height: 50px;
+        color: goldenrod;
+        background-color: aquamarine;
+      }
+      article {
+        padding: 10px;
+        margin: 10px;
+        background-color: antiquewhite;
+      }
+      button {
+        width: 10em;
+        font-size: 15px;
+        line-height: 1.5em;
+      }
+
+      /* flexbox styles starts here */
+
+      section {
+        display: flex;
+
+        flex-flow: row wrap;
+      }
+
+      article {
+        flex: 1 200px;
+      }
+
+      article:nth-child(3) {
+        flex: 4 200px;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      article:nth-child(3) div:nth-child(1) {
+        flex: 1 100px;
+
+        display: flex;
+        flex-flow: row wrap;
+
+        align-items: center;
+        justify-content: space-evenly;
+      }
+    </style>
+  </body>
+</html>

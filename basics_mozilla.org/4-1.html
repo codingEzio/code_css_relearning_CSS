@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4-1</title>
+  </head>
+  <body>
+    <style>
+      /* setup */
+      body {
+        width: 90%;
+        max-width: 900px;
+        margin: 1em auto;
+        border: 2px solid red;
+      }
+      #container > div {
+        background-color: navajowhite;
+        border: 2px dashed chocolate;
+        border-radius: 5px;
+        padding: 5px;
+      }
+
+      /* Grid style starts here */
+      #container {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 2fr 0.5fr;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
+        /*
+            grip-row-gap grid-column-gap    obselete, no `grip` prefix needed
+                grid-gap        grid-gap    obselete, no `grip` prefix needed
+                 row-gap      column-gap    explicit form for `gap` (1or2 args)
+                     gap             gap    short(r/c) & universal (layoutwise)
+
+            you could add the prefix to make your code more "changeproof"
+         */
+        grid-gap: 3em 1em;
+        gap: 3em 1em;
+
+        grid-auto-rows: 3em;
+        grid-auto-rows: minmax(3em, auto);
+
+        /* doesn't seem to affect too much because of the template being set */
+        grid-auto-columns: min-content;
+      }
+    </style>
+
+    <h1>Grid example</h1>
+
+    <div id="container">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+      <div>Six</div>
+    </div>
+  </body>
+</html>

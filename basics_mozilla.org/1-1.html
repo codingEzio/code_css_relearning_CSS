@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1-1</title>
+  </head>
+  <body>
+    <div id="boxsizing">
+      <div id="boxsizing-default">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui bonum omne
+        virtutis; Dolere malum est: in crucem qui agitur, beatus esse non
+        potest. beatus umquam
+      </div>
+
+      <div id="boxsizing-borderbox">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui bonum omne
+        virtutis; Dolere malum est: in crucem qui agitur, beatus esse non
+        potest. beatus umquam
+      </div>
+    </div>
+
+    <div id="margin-collapsing">
+      <div id="margin-collapsing-p1">Oops</div>
+      <div id="margin-collapsing-p2">Oops</div>
+    </div>
+
+    <hr />
+
+    <div id="inlinespan">
+      <div>Such a <span id="inlinespan-p1">beautiful</span> day!</div>
+      <div>Such a <span id="inlinespan-p2">beautiful</span> day!</div>
+    </div>
+
+    <style>
+      /*
+        `margin` is always out of the discussion; it wasn't part of the content
+      */
+
+      #boxsizing-default {
+        box-sizing: content-box;
+
+        width: 200px;
+        height: 200px;
+
+        /*
+            space occupied   :  200+10+5   x 200+10+5
+            space for content:  200        x 200
+        */
+        padding: 10px;
+        border: 5px solid rosybrown;
+
+        margin: 5px;
+      }
+      #boxsizing-borderbox {
+        box-sizing: border-box;
+
+        width: 200px;
+        height: 200px;
+
+        /*
+            space occupied   : 200              x 200
+            space for content: 200 - 10*2 - 5*2 x 200 - 10*2 - 5*2  (170x170)
+        */
+        padding: 10px;
+        border: 5px solid royalblue;
+
+        margin: 5px;
+      }
+
+      /*
+        margin collapsing
+        - case 1    two non-negative        max
+        - case 2    one non-neg, one neg    sum
+        - case 3    two negative            min (very unlikely..)
+      */
+      #margin-collapsing-p1 {
+        margin-bottom: 10px;
+
+        border: 5px solid lightgreen;
+        width: 100px;
+        height: 100px;
+      }
+      #margin-collapsing-p2 {
+        margin-top: 40px;
+
+        border: 5px solid lightgreen;
+        width: 100px;
+        height: 100px;
+      }
+
+      /*
+        Q: wanna make sure the inline items won't be too big? (to the outside)
+        A: inline-block plus padding
+
+        Q: want your `span`ed items be bigger, but don't the overlapping?
+        A: inline-block
+      */
+      #inlinespan-p1 {
+        margin: 10px;
+        border: 5px solid forestgreen;
+        background-color: gold;
+        color: fuchsia;
+
+        width: 200px;
+        height: 200px;
+
+        display: inline;
+      }
+      #inlinespan-p2 {
+        margin: 10px;
+        border: 5px solid forestgreen;
+        background-color: gold;
+        color: fuchsia;
+
+        width: 200px;
+        height: 200px;
+
+        display: inline-block;
+      }
+
+      /* This is what most people does nowadays (no more calculation) */
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+    </style>
+  </body>
+</html>
