@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./static/favicon/fav_num2_64.png"
+      sizes="64x64"
+      type="image/png"
+    />
+    <title>Flexbox & Grid Layout</title>
+  </head>
+  <body>
+    <div id="container">
+      <nav>
+        <ul>
+          <li>Nelle Mack</li>
+          <li>Helen Thomas</li>
+          <li>Dora Perry</li>
+          <li>Cory Frazier</li>
+          <li>Anthony Peterson</li>
+          <li>Cecelia Pena</li>
+          <li>Bobby Hudson</li>
+          <li>Kyle Watkins</li>
+          <li>Harriett Long</li>
+          <li>Pearl Vargas</li>
+          <li>Corey Wilson</li>
+          <li>Logan Porter</li>
+          <li>Gerald Campbell</li>
+          <li>Eugene Bryant</li>
+          <li>Luis Fields</li>
+        </ul>
+      </nav>
+
+      <section class="column">
+        <h1>Title 1</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo igitur
+          esse beatus potest. Duo Reges: constructio interrete. Multoque hoc
+          melius nos veriusque quam Stoici. Sic enim censent, oportunitatis
+          esse beate vivere. Illum mallem levares, quo optimum atque
+          humanissimum virum, Cn. Ergo ita: non posse honeste vivi, nisi
+          honeste vivatur?
+        </p>
+      </section>
+
+      <section class="column">
+        <h1>Title 2</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo igitur
+          esse beatus potest. Duo Reges: constructio interrete. Multoque hoc
+          melius nos veriusque quam Stoici. Sic enim censent, oportunitatis
+          esse beate vivere. t. Duo Reges: constructio interrete. Multoque hoc
+          melius nos veriusque quam Stoici. Sic enim censent, oportunitatis
+          esse beate vivere. Illum mallem levares, quo optimum atque
+          humanissimum virum,Illum mallem levares, quo optimum atque
+          humanissimum virum, Cn. Ergo ita: non posse honeste vivi, nisi
+          honeste vivatur?
+        </p>
+      </section>
+      <section>
+        <h1>Title 3</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo igitur
+          esse beatus potest. Duo Reges: constructio interrete. Multoque hoc
+          melius nos veriusque quam Stoici. Sic enim censent, oportunitatis
+          esse beate vivere. Illum mallem levares, quo optimum atque
+          humanissimum virum, Cn. Ergo ita: non posse honeste vivi, nisi
+          honeste vivatur?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo igitur
+          esse beatus potest. Duo Reges: constructio interrete. Multoque hoc
+          melius nos veriusque quam Stoici. Sic enim censent, oportunitatis
+          esse beate vivere. Illum mallem levares, quo optimum atque
+          humanissimum virum, Cn. Ergo ita: non posse honeste vivi, nisi
+          honeste vivatur?
+        </p>
+      </section>
+
+      <footer>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sciret
+          confestim esse moriendum eamque mortem ardentiore studio peteret,
+          quam Epicurus voluptatem petendam putat. Quodsi vultum tibi, si
+          incessum fingeres, quo gravior viderere, non esses tui similis; Ac
+          tamen hic mallet non dolere. Aut, Pylades cum sis, dices te esse
+          Orestem, ut moriare pro amico? Nec vero pietas adversus deos nec
+          quanta iis gratia debeatur sine explicatione naturae intellegi
+          potest.
+        </p>
+      </footer>
+
+      <div id="cookie-bar">
+        <p>
+          esse moriendum eamque mortem ardentiore studio peteret, quam Epicurus
+          voluptatem petendam putat. Quodsi vultum tibi, si incessum fingeres,
+          quo gravior viderere, non esses tui similis; Ac tamen hic mallet non
+          dolere. Aut, Pylades cum sis, dices te esse Orestem, ut moria
+        </p>
+      </div>
+    </div>
+    <style>
+      div,
+      nav,
+      section {
+        border: groove rgb(197, 230, 127) 3px;
+        margin: 5px;
+      }
+
+      .container {
+        position: relative;
+      }
+
+      section.column {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      section {
+        margin-left: 250px;
+      }
+
+      footer {
+        position: relative;
+        width: 80%;
+        margin: 0 10% 0 10%;
+      }
+
+      #cookie-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 50px;
+        background-color: aquamarine;
+        width: 100%;
+      }
+
+      body {
+        margin-bottom: 100px;
+      }
+
+      /*
+        Three parts to explain :)
+          position    position relative to the parent (`body` in this case!)
+          left        purely aesthetic purpose
+
+          float
+          width       combined to reserve spaces for the left part of the screen
+
+          overflow    make sure the text aren't going to be flow out of the box
+      */
+      @media (min-width: 600px) {
+        nav {
+          position: absolute;
+          left: 3%;
+
+          /* float: left; */
+          display: inline-block;
+          vertical-align: top;
+          width: 25%;
+
+          overflow: auto;
+        }
+      }
+
+      /*
+        It basically let CSS treat the nav/li as an inline chunk of text,
+        just like tags like `span`, `strong` and `em` etc.
+
+        Comparison
+        - inline          inline chunk    width/height can be specified: no
+        - inline-block    inline chunk    width/height can be specified: yes
+      */
+      @media (max-width: 599px) {
+        nav li {
+          display: inline;
+        }
+      }
+    </style>
+  </body>
+</html>

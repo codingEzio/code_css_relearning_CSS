@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./static/favicon/fav_num3_64.png"
+      sizes="64x64"
+      type="image/png"
+    />
+    <title>Flexbox & Grid Layout</title>
+  </head>
+  <body>
+    <div id="exp1">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ad corpus
+        diceres pertinere-, sed ea, quae dixi, ad corpusne refers? His singulis
+        copiose responderi solet, sed quae perspicua sunt longa esse non
+        debent. Qui autem diffidet perpetuitati bonorum suorum, timeat necesse
+        est, ne aliquando amissis illis sit miser. Satis est ad hoc responsum.
+        Quamquam te quidem video minime esse deterritum. Sin ea non neglegemus
+        neque tamen ad finem summi boni referemus, non multum ab Erilli
+        levitate aberrabimus.
+      </p>
+      <p>
+        <img
+          src="./static/img/riverdance.jpg"
+          alt="A member from Riverdance"
+        />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ex ea
+        difficultate illae fallaciloquae, ut ait Accius, malitiae natae sunt.
+        Qui non moveatur et offensione turpitudinis et comprobatione
+        honestatis? An hoc usque quaque, aliter in vita? Dempta enim
+        aeternitate nihilo beatior Iuppiter quam Epicurus; Quos quidem tibi
+        studiose et diligenter tractandos magnopere censeo. Non laboro, inquit,
+        de nomine. Duo Reges: constructio interrete. Illa argumenta propria
+        videamus, cur omnia sint paria peccata. Sed plane dicit quod
+        intellegit. Quamquam ab iis philosophiam et omnes ingenuas disciplinas
+        habemus; Quonam modo? Respondent extrema primis, media utrisque, omnia
+        omnibus. Quae similitudo in genere etiam humano apparet. Quid, cum
+        fictas fabulas, e quibus utilitas nulla elici potest, cum voluptate
+        legimus? Equidem e Cn. Gerendus est mos, modo recte sentiat. Ita enim
+        vivunt quidam, ut eorum vita refellatur oratio. An haec ab eo non
+        dicuntur?
+      </p>
+    </div>
+
+    <div id="exp2">
+      <div id="exp2-part1-box">
+        111111111111 Lorem ipsum dolor sit amet, consectel in, quod
+        animadvertendum esse ipsa natura si coronam times, dic in senatu.
+      </div>
+      <div id="exp2-part2-float">
+        <section>
+          222222222222 iudicet? Uterque enim summo bono fruitur, id est
+          voluptate. Perturbationes autem nulla naturae vi commoventur,
+          omniaque ea sunt opiniones ac iudicia levitatis. Nam quibus rebus
+          efficiuntur voluptates, eae non sunt in potestate sapientis. Illo
+          enim addito iuste fit recte factum, per se autem hoc ipsum reddere in
+          officio ponitur. Nam aliquando posse recte fieri dicunt nulla
+          expectata nec quaesita voluptate. Sed tamen intellego quid velit.
+          Quaesita enim virtus est, non quae relinqueret naturam, sed quae
+          tueretur. Duo Reges: constructio interrete. At tu eadem ista dic in
+          iudicio aut, quaesita voluptate. Sed tamen intellego quid velit.
+          Quaesita enim virtus est, non quae relinqueret naturam, sed quae
+          tueretur. Duo Reges: constructio interrete. At tu eadem ista dic in
+          iudicio aut,
+        </section>
+      </div>
+    </div>
+
+    <div id="exp3">
+      <img src="./static/img/riverdance.jpg" alt="A member from Riverdance" />
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid, quod res
+        alia tota est? Atqui iste locus est, Piso, tibi etiam atque etiam
+        confirmandus, inquam; Cur igitur, inquam, res tam dissimiles eodem
+        nomine appellas? Et hi quidem ita non sola virtute finem bonorum
+        contineri pu Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Quid, quod res alia tota est? Atqui iste locus est, Piso, tibi etiam
+        atque etiam confirmandus, inquam; Cur igitur, inquam, res tam
+        dissimiles eodem nomine appellas? Et hi quidem ita non sola virtute
+        finem bonorum contineri putant, ut rebus tamen omnibus virtutem
+        anteponant; Nos autem non solum beatae vitae istam esse oblectationem
+        videmus, sed etiam levamentum miseriarum. At Zeno eum non beatum modo,
+        sed etiam divitem dicere ausus est.tant, ut rebus tamen omnibus
+        virtutem anteponant; Nos autem non solum beatae vitae istam esse
+        oblectationem videmus, sed etiam levamentum miseriarum. At Zeno eum non
+        beatum modo, sed etiam divitem dicere ausus est.
+      </p>
+    </div>
+
+    <style>
+      div[id^="exp1"],
+      div[id^="exp2"],
+      div[id^="exp4"] {
+        width: 550px;
+        margin: 0; /* purely for aesthetic purposes */
+      }
+
+      /* ------ REAL CSS Practice STARTS ----- */
+
+      #exp1 img {
+        float: right;
+        width: 35%;
+        height: 35%;
+        margin: 0 0 5px 10px;
+      }
+
+      /*
+        The main thing you need to concern is the `float` in the box `div`.
+
+        Imagine a scenario like this
+        - EXPECTED      box: float to the right
+        - RESULT        box: float to the right, but inside the latter `div`!
+
+        What we wanna do is "not letting `float` affect other elems' appearance"
+        - You could remove it   NOT what we want at all, NOT accepted
+        - You could retain it   add `clear: [left|right|both]` to the next elem
+       */
+      #exp2-part1-box {
+        float: right;
+
+        width: 200px;
+        height: 100px;
+
+        color: red;
+      }
+      #exp2-part2-float {
+        clear: both;
+        color: blue;
+      }
+
+      /*
+        The main thing you need to concern here is the `overflow`
+        - default   visible  not clipped
+        - common    scroll   a scroll-bar is added (`auto` behaves similiarly)
+
+        It actually solves two things at once in this case
+        - IF the text is too much (more than the `500x250` could hancle)
+        - IF the image is too big (just like the text but way uglier :<)
+
+        Now let's to be more specific, what if there isn't a W/H limit here?
+        - that would at least allow the div to expand to "contain" the image
+      */
+      #exp3 {
+        width: 500px;
+        height: 250px;
+        background-color: lightblue;
+
+        overflow: auto;
+      }
+
+      #exp3 img {
+        float: right;
+        width: 33%;
+        height: 66%;
+      }
+
+      /* ------ REAL CSS Practice ENDS ----- */
+
+      #exp1,
+      #exp2 {
+        display: block;
+      }
+    </style>
+  </body>
+</html>

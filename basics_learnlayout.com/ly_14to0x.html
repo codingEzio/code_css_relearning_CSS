@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./static/favicon/fav_num4_64.png"
+      sizes="64x64"
+      type="image/png"
+    />
+    <title>Flexbox & Grid Layout</title>
+  </head>
+  <body>
+    <div id="exp1">
+      <div class="exp1-part1-box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus,
+        aliquando posse recte fieri dicunt nulla expectata nec quaesita
+        voluptate.
+      </div>
+      <div class="exp1-part1-box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus,
+        aliquando posse recte fieri dicunt nulla expectata nec quaesita
+        voluptate.
+      </div>
+      <div class="exp1-part1-box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus,
+        aliquando posse recte fieri dicunt nulla expectata nec quaesita
+        voluptate.
+      </div>
+      <div class="exp1-part1-box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus,
+        aliquando posse recte fieri dicunt nulla expectata nec quaesita
+        voluptate.
+      </div>
+      <div class="exp1-part1-box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus,
+        aliquando posse recte fieri dicunt nulla expectata nec quaesita
+        voluptate.
+      </div>
+      <div class="exp1-part1-box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus,
+        aliquando posse recte fieri dicunt nulla expectata nec quaesita
+        voluptate.
+      </div>
+      <div class="exp1-part1-box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus,
+        aliquando posse recte fieri dicunt nulla expectata nec quaesita
+        voluptate.
+      </div>
+
+      <div id="exp1-part2-box-after">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid enim me
+        prohiberet Epicureum esse, si probarem, quae ille diceret? Sed
+        emolumenta communia esse dicuntur, recte autem facta et peccata non
+        habentur communia. Eiuro, inquit adridens, iniquum, hac quidem de re;
+        Audio equidem philosophi vocem, Epicure, sed quid tibi dicendum sit
+        oblitus es. Diodorus, eius auditor, adiungit ad honestatem vacuitatem
+        doloris. Atqui perspicuum est hominem e corpore animoque constare, cum
+        primae sint animi partes, secundae corporis. Duo Reges: constructio
+        interrete. Cur post Tarentum ad Archytam? Nos commodius agimus. Eam tum
+        adesse, cum dolor omnis absit;
+      </div>
+    </div>
+
+    <hr />
+
+    <div id="exp2">
+      <div class="exp2-part1-box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus,
+        aliquando posse recte fieri dicunt nulla expectata nec quaesita
+        voluptate.
+      </div>
+      <div class="exp2-part1-box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus,
+        aliquando posse recte fieri dicunt nulla expectata nec quaesita
+        voluptate.
+      </div>
+      <div class="exp2-part1-box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus,
+        aliquando posse recte fieri dicunt nulla expectata nec quaesita
+        voluptate.
+      </div>
+      <div class="exp2-part1-box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus,
+        aliquando posse recte fieri dicunt nulla expectata nec quaesita
+        voluptate.
+      </div>
+      <div class="exp2-part1-box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus,
+        aliquando posse recte fieri dicunt nulla expectata nec quaesita
+        voluptate.
+      </div>
+      <div class="exp2-part1-box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus,
+        aliquando posse recte fieri dicunt nulla expectata nec quaesita
+        voluptate.
+      </div>
+      <div class="exp2-part1-box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus,
+        aliquando posse recte fieri dicunt nulla expectata nec quaesita
+        voluptate.
+      </div>
+
+      <div id="exp2-part2-box-after">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid enim me
+        prohiberet Epicureum esse, si probarem, quae ille diceret? Sed
+        emolumenta communia esse dicuntur, recte autem facta et peccata non
+        habentur communia. Eiuro, inquit adridens, iniquum, hac quidem de re;
+        Audio equidem philosophi vocem, Epicure, sed quid tibi dicendum sit
+        oblitus es. Diodorus, eius auditor, adiungit ad honestatem vacuitatem
+        doloris. Atqui perspicuum est hominem e corpore animoque constare, cum
+        primae sint animi partes, secundae corporis. Duo Reges: constructio
+        interrete. Cur post Tarentum ad Archytam? Nos commodius agimus. Eam tum
+        adesse, cum dolor omnis absit;
+      </div>
+    </div>
+
+    <style>
+      div[id^="exp1"],
+      div[id^="exp2"] {
+        margin: 0; /* purely for aesthetic purposes */
+      }
+
+      /*
+        You'll have to use the `claer: L/R/both when there's a `float`
+      */
+      .exp1-part1-box {
+        float: left;
+        width: 180px;
+        height: 100px;
+        margin: 1.5em;
+      }
+      #exp1-part2-box-after {
+        clear: left;
+      }
+
+      /*
+        No need for both `float` and `clear`
+        - it serves as an alternative (a MUCH better one) to `float`
+        - it in turns invalidates the need for "clearing" the `float`
+      */
+      .exp2-part1-box {
+        display: inline-block;
+        width: 180px;
+        height: 100px;
+
+        margin: 1.5em;
+
+        /* float: left; */
+      }
+      #exp2-part2-box-after {
+        border: 2px double rosybrown;
+
+        /* clear: both; */
+      }
+
+      #exp1,
+      #exp2 {
+        display: block;
+      }
+    </style>
+  </body>
+</html>

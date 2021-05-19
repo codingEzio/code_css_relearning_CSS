@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./static/favicon/fav_num1_64.png"
+      sizes="64x64"
+      type="image/png"
+    />
+    <title>Flexbox & Grid Layout</title>
+  </head>
+  <body>
+    <div id="banner">
+      <pre>
+        width: 500px;
+        margin: 10px;
+      </pre>
+    </div>
+
+    <div id="exp1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quos quidem tibi
+      studiose et diligenter tractandos magnopere censeo. Duo Reges:
+      constructio interrete. Claudii libidini, qui tum erat summo ne imperio,
+      dederetur. Tubulum fuisse, qua illum, cuius is condemnatus est rogatione,
+      P. Quodsi vultum tibi, si incessum fingeres, quo gravior viderere, non
+      esses tui similis; Aliena dixit in physicis nec ea ipsa, quae tibi
+      probarentur;
+    </div>
+
+    <div id="exp2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo opifex plus
+      sibi proponet ad formarum quam civis excellens ad factorum
+      pulchritudinem? At iste non dolendi status non vocatur voluptas. Iam quae
+      corporis sunt, ea nec auctoritatem cum animi partibus, comparandam et
+      cognitionem habent faciliorem. Positum est a nostris in iis esse rebus,
+      quae secundum naturam essent, non dolere; Hanc quoque iucunditatem, si
+      vis, transfer in animum; Peccata paria. Est enim tanti philosophi tamque
+      nobilis audacter sua decreta defendere. Illa argumenta propria videamus,
+      cur omnia sint paria peccata. Duo Reges: constructio interrete.
+    </div>
+
+    <div id="exp3">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et ille ridens:
+      Video, inquit, quid agas; At, si voluptas esset bonum, desideraret.
+      Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus; Nonne
+      igitur tibi videntur, inquit, mala? Atque his de rebus et splendida est
+      eorum et illustris oratio. Animum autem reliquis rebus ita perfecit, ut
+      corpus;
+    </div>
+
+    <div id="exp4">
+      <div id="exp4-part1-static">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et ille
+        ridens: Video, inquit, quid agas; At, si voluptas esset bonum, habemus;
+        Nonne igitur tibi videntur, inquit, mala? Atque his de rebus et
+        splendida est eorum et illustris oratio. Animum autem reliquis rebus
+        ita perfecit, ut corpus;
+      </div>
+      <div id="exp4-part2-relative1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et ille
+        ridens: Video, inquit, quid agas; At, si voluptas esset bonum,
+        desideraret. Quamquam ab iis philosophiam et omnes ingenuas disciplinas
+        et splendida est eorum et illustris oratio. Animum autem reliquis rebus
+        ita perfecit, ut corpus;
+      </div>
+      <div id="exp4-part2-relative2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et ille Nonne
+        igitur tibi videntur, inquit, mala? Atque his de rebus et splendida est
+        eorum et illustris oratio. Animum autem reliquis rebus ita perfecit, ut
+        corpus;
+      </div>
+      <div id="exp4-part3-fixed">Mr. Fixed is here!</div>
+      <div id="exp4-part4-relative">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et ille Nonne
+        igitur tibi videntur, inquit, mala? Atque his de rebus et splendida est
+        igitur tibi videntur, inquit, mala? Atque his de rebus et splendida est
+        igitur tibi videntur, inquit, mala? Atque his de rebus et splendida est
+        igitur tibi videntur, inquit, mala? Atque his de rebus et splendida est
+        eorum et
+
+        <div id="exp4-part4-relative-inside-absolute">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et ille et
+          splendida est igitur tibi videntur, inquit, mala? Atque his de rebus
+          splendida est igitur tibi videntur, inquit, mala? Atque his de rebus
+          et splendida est eorum et
+        </div>
+      </div>
+    </div>
+
+    <style>
+      div#banner pre {
+        font-family: "SF Mono", Consolas;
+      }
+
+      div[id^="exp2"],
+      div[id^="exp3"],
+      div[id^="exp4-part1"],
+      div[id^="exp4-part2"] {
+        width: 450px;
+        margin: 10px; /* purely for aesthetic purposes */
+      }
+
+      /*
+        compare to `width`, this will allow the text flow to the
+        next line (note: do not set them both at the same time)
+
+        margin: 0 (vertical-T/B) auto (horizontal-L/R)
+      */
+      #exp1 {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /*
+        except `width`, all else expand outward
+        :: padding - clear an area around the content
+        :: border  - a border that goes around the padding|content
+        :: margin  - clears an area around the border
+        */
+      #exp2 {
+        padding: 10px;
+        border: dotted rgb(219, 161, 85) 10px;
+
+        margin: 20px auto;
+      }
+
+      /*
+        once you set the `border-box`, the `width` (500px) will be
+        "allocated" to not just the content but also the `padding`
+        and `border`, therefore
+        - padding & border will be "expanding inward"
+        - the 500px `width` will include both padding & border
+        - the space for content will be the leftover (500-bd-pd)
+        */
+      #exp3 {
+        padding: 50px;
+        border: dotted rebeccapurple 10px;
+
+        margin: 20px auto;
+
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+
+      /*
+        static
+          not positioned in any way
+
+        relative
+          not positioned in any way IF no extra properties specified
+          positioned relatively to itself
+
+        fixed
+          positioned relative to the viewport
+          it stays at the same place if the page is scrolled
+
+        absolute
+          positioned relative to the nearest <positioned> ancestor
+          it behaves quite like `fixed` but inside a positioned one
+
+        sticky
+          x
+      */
+
+      #exp4-part1-static {
+        position: static;
+      }
+
+      #exp4-part2-relative1 {
+        position: relative;
+        background-color: blue;
+      }
+      #exp4-part2-relative2 {
+        position: relative;
+        background-color: red;
+
+        top: -30px;
+        left: 30px;
+
+        width: 400px;
+      }
+
+      #exp4-part3-fixed {
+        position: fixed;
+        background-color: rgb(210, 212, 51);
+
+        left: 0;
+        top: 0;
+      }
+
+      #exp4-part4-relative {
+        position: relative;
+
+        width: 500px;
+        height: 300px;
+        border: dashed rgb(201, 67, 67) 5px;
+      }
+      #exp4-part4-relative-inside-absolute {
+        position: absolute;
+
+        width: 300px;
+        height: 100px;
+        border: groove rgb(67, 121, 118) 5px;
+
+        top: 150px;
+        right: 0;
+      }
+
+      #exp1,
+      #exp2,
+      #exp3,
+      #exp4 {
+        display: block;
+      }
+    </style>
+  </body>
+</html>
