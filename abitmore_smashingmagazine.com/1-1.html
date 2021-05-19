@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1-1</title>
+  </head>
+  <body>
+    <style>
+      article {
+        border: 1px solid red;
+      }
+
+      #flex-defaults section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        align-items: stretch;
+        justify-content: flex-start;
+      }
+      #flex-defaults article {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+      }
+
+      #grid-defaults section {
+        display: grid;
+
+        grid-auto-flow: row;
+        grid-auto-rows: auto;
+
+        align-items: stretch;
+        justify-items: stretch;
+
+        grid-gap: 0;
+        gap: 0;
+      }
+      #grid-defaults article {
+        align-self: center;
+      }
+    </style>
+
+    <h1>Flexbox</h1>
+
+    <div id="flex-defaults">
+      <section>
+        <article>
+          <h1>Article 1</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cur igitur
+            easdem res, inquam, Peripateticis dicentibus verbum nullum est,
+            quod non intellegatur? Duo Reges: constructio interrete. Graecum
+            enim hunc versum nostis omnes-: Suavis laborum est praeteritorum
+            memoria. Utilitatis causa amicitia est quaesita.
+          </p>
+        </article>
+
+        <article>
+          <h1>Article 2</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cur igitur
+            easdem res, inquam, Peripateticis dicentibus verbum nullum est,
+            quod non intellegatur? Duo Reges: constructio interrete. Graecum
+            enim hunc versum nostis omnes-: Suavis laborum est praeteritorum
+            memoria. Utilitatis causa amicitia est quaesita.
+          </p>
+        </article>
+        <article>
+          <h1>Article 3</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cur igitur
+            easdem res, inquam, Peripateticis dicentibus verbum nullum est,
+            quod non intellegatur? Duo Reges: constructio interrete. Graecum
+            enim hunc versum nostis omnes-: Suavis laborum est praeteritorum
+            memoria. Utilitatis causa amicitia est quaesita.
+          </p>
+        </article>
+        <article>
+          <h1>Article 4</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cur igitur
+            easdem res, inquam, Peripateticis dicentibus verbum nullum est,
+            quod non intellegatur? Duo Reges: constructio interrete. Graecum
+            enim hunc versum nostis omnes-: Suavis laborum est praeteritorum
+            memoria. Utilitatis causa amicitia est quaesita.
+          </p>
+        </article>
+      </section>
+    </div>
+
+    <h1>Grid</h1>
+
+    <div id="grid-defaults">
+      <section>
+        <article>
+          <h1>Article 1</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cur igitur
+            easdem res, inquam, Peripateticis dicentibus verbum nullum est,
+            quod non intellegatur? Duo Reges: constructio interrete. Graecum
+            enim hunc versum nostis omnes-: Suavis laborum est praeteritorum
+            memoria. Utilitatis causa amicitia est quaesita.
+          </p>
+        </article>
+        <article>
+          <h1>Article 2</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cur igitur
+            easdem res, inquam, Peripateticis dicentibus verbum nullum est,
+            quod non intellegatur? Duo Reges: constructio interrete. Graecum
+            enim hunc versum nostis omnes-: Suavis laborum est praeteritorum
+            memoria. Utilitatis causa amicitia est quaesita.
+          </p>
+        </article>
+        <article>
+          <h1>Article 3</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cur igitur
+            easdem res, inquam, Peripateticis dicentibus verbum nullum est,
+            quod non intellegatur? Duo Reges: constructio interrete. Graecum
+            enim hunc versum nostis omnes-: Suavis laborum est praeteritorum
+            memoria. Utilitatis causa amicitia est quaesita.
+          </p>
+        </article>
+        <article>
+          <h1>Article 4</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cur igitur
+            easdem res, inquam, Peripateticis dicentibus verbum nullum est,
+            quod non intellegatur? Duo Reges: constructio interrete. Graecum
+            enim hunc versum nostis omnes-: Suavis laborum est praeteritorum
+            memoria. Utilitatis causa amicitia est quaesita.
+          </p>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>
